@@ -1,0 +1,61 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Finance Tracker</title>
+
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Finance App</h1>
+      <div class="input-section">
+        <h3>Enter Amount</h3>
+        <input type="number" id="amount" placeholder="Amount" />
+      </div>
+
+      <div class="buttons">
+        <button onclick="addIncome()">Income</button>
+        <button onclick="addExpenditure()">Expenditure</button>
+      </div>
+      <div class="summary">
+        <div class="summary-box">
+          <h2>Income</h2>
+          <p><span id="total-income">0</span></p>
+        </div>
+        <div class="summary-box">
+          <h2>Expenditure</h2>
+          <p><span id="total-expenditure">0</span></p>
+        </div>
+        <div class="summary-box">
+          <h2>Balance</h2>
+          <p id="balance"><span id="balance-value">0</span></p>
+        </div>
+        <div class="summary-box">
+          <h2>Savings/Loss</h2>
+          <p id="savings"><span id="savings-value">0</span></p>
+        </div>
+      </div>
+
+      <div class="timeline">
+        <h2>Transaction History</h2>
+        <table id="transaction-table">
+          <thead>
+            <tr>
+              <th>Transaction Type</th>
+              <th>Date</th>
+              <th>Time</th>
+              <th>Balance</th>
+            </tr>
+          </thead>
+          <tbody id="transaction-list">
+            <!-- Transaction rows will be added dynamically here -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
